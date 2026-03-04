@@ -1,0 +1,156 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root{
+width: 1700px;
+height: 700px;
+
+}
+
+.navbar{
+  position: fixed;
+  top:0;
+   background-color: hsl(209, 23%, 22%);
+  width: 95%;
+  height: 100px;
+  padding: 0 2.5rem ;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ 
+.container{
+  width: 1000px;
+  display: grid;
+  margin:  0 auto;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 50px auto;
+
+  gap: 10px;
+
+}
+
+button{
+   background-color: hsl(209, 23%, 22%);
+}
+
+.but{
+   padding: 10px;
+   width: 115px;
+  grid-row: 1/2; 
+  background-color: hsl(209, 23%, 22%);
+  display: flex;
+  align-items: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.button{
+   padding: 10px;
+  grid-row: 1/2; 
+  background-color: hsl(209, 23%, 22%);
+  display: flex;
+  align-items: center;
+  align-items: center;
+  gap: 5px;
+}
+.buty{
+  padding: 10px; 
+  width: 100px;
+  height: 25px;
+  background-color: hsl(209, 23%, 22%);
+  display: flex;
+  align-items: center;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.text_container{
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.country{
+  display: grid;
+  grid-template-columns: auto auto auto auto ;
+  grid-template-rows: 120px auto;
+}
+.heading{
+  width: 95%;
+  height: 100px;
+  padding: 0 2.5rem ;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-row: 1/2;
+  grid-column: 1/5;
+}
+
+.country_infos{
+ margin: 10px;
+ width: 250px;
+ background-color: hsl(209, 23%, 22%);
+ box-shadow: hsl(209, 23%, 22%) 0px 3px 20px;
+ border-radius: 10px;
+}
+
+.infos{
+  width: 100%;
+  padding: 10px;
+}
+
+
+.sub_text_container{
+  display: grid;
+  grid-template-columns: 250px 250Px;
+}
+
+.icon{
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+.search{
+  display: flex;
+  align-items: center;
+  background-color: hsl(209, 23%, 22%);
+  border-radius: 5px;
+  padding: 5px;
+}
+.filter {
+  position: relative;
+  display: inline-block;
+  background-color: hsl(209, 23%, 22%);
+
+}
+
+.filter-dropdown-content {
+  display: none;
+  position: absolute;
+   background-color: hsl(209, 23%, 22%);
+  min-width: 130px;
+/*  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+  padding: 12px 12px;
+  z-index: 1;
+}
+
+.filter:hover .filter-dropdown-content {
+  display: block;
+}
+
+.filter-dropdown-content p{
+border: 1px solid grey;
+padding: 15px;
+}
+
+.filter span{
+ display: flex;
+ align-items: center; 
+ padding: 5px;
+}

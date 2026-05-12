@@ -1,7 +1,7 @@
 import { Icons } from "../icon";
 
 
-function SearchBar() {
+function SearchBar({searchElement,  setSearchElement}) {
 
     return (
         <div className='search'>

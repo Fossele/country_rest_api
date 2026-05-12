@@ -13,25 +13,25 @@ import searchIcon from '../assets/search-outline.svg'
 
 function Home() {
     const [searchElement, setSearchElement] = useState("");
-    const [showDetails, setShowDetails] = useState(true);//stupidly details will show when the state is false
-    const [filtering, setFiltering] = useState(true);
+    const [showDetails, setShowDetails] = useState(false);//stupidly details will show when the state is false
+    const [filtering, setFiltering] = useState(false);
 
     const countrySearch = (name) => data.find(elt => elt.name.toLowerCase() === name.toLowerCase());
 
 
     useEffect(() => {
-        if (showDetails === true) {
+        if (showDetails) {
             if (countrySearch(searchElement)) {
-                setShowDetails(false);
+                setShowDetails(true);
             }
         }
-    }, [searchElement, showDetails, setShowDetails]);
+    }, [searchElement, showDetails]);
 
     return (
         <div>
             <NavBar />
             {
-                showDetails ? (
+                !showDetails ? (
                     <Country searchElement={searchElement} setSearchElement={setSearchElement} setShowDetails={setShowDetails} filtering={filtering} setFiltering={setFiltering} />
                 ) : (<CountryDetails searchItem={searchElement} setSearchElement={setSearchElement} setShowDetails={setShowDetails} setFiltering={setFiltering} />)
             }

@@ -1,20 +1,22 @@
-function Filter() {
+import { Icons } from "../icon";
+
+function Filter({setFiltering, setRegion}) {
     return (
-        <form>
+      
             <div className='filter'>
                 <span>
                     filter by region <Icons.down className="icon" />
                 </span>
 
                 <div className='filter-dropdown-content'>
-                    <button className='but' onClick={() => { setfilter(false); setRegion("Africa") }}>Africa</button>
-                    <button className='but' onClick={() => { setfilter(false); setRegion("Americas") }}>America</button>
-                    <button className='but' onClick={() => { setfilter(false); setRegion("Asia") }}>Asia</button>
-                    <button className='but' onClick={() => { setfilter(false); setRegion("Europe") }}>Europe</button>
-                    <button className='but' onClick={() => { setfilter(false); setRegion("Oceania") }}>Oceania</button>
+                    <button className='but' onClick={() => { setFiltering(true); setRegion("Africa") }}>Africa</button>
+                    <button className='but' onClick={() => { setFiltering(true); setRegion("Americas") }}>America</button>
+                    <button className='but' onClick={() => { setFiltering(true); setRegion("Asia") }}>Asia</button>
+                    <button className='but' onClick={() => { setFiltering(true); setRegion("Europe") }}>Europe</button>
+                    <button className='but' onClick={() => { setFiltering(true); setRegion("Oceania") }}>Oceania</button>
                 </div>
             </div>
-        </form>
+        
     )
 }
 
